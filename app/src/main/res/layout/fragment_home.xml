@@ -4,25 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".HomeFragment">
 
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/filled_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_tanggal_home"
+        style="@style/tv.interBlack.24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOME"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="23"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/tv_bulan_home"
+        style="@style/tv.interSemiBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        style="@style/btn.White"
+        android:layout_marginStart="8dp"
+        android:text="September 2025"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/tv_tanggal_home"
+        app:layout_constraintTop_toTopOf="@+id/tv_tanggal_home" />
+
+    <TextView
+        android:id="@+id/tv_perpus_home"
+        style="@style/tv.interExtraLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_light"
+        android:text="PERPUSTAKAAN SMP NEGERI 6 MANOKWARI"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tv_tanggal_home"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_home" />
+
+    <TextView
+        android:id="@+id/tv_selamat_datang"
+        style="@style/tv.interExtraBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_perpus_home"
+        app:layout_constraintTop_toBottomOf="@+id/tv_perpus_home" />
+
+    <TextView
+        android:id="@+id/tv_dashboard_home"
+        style="@style/tv.interBold.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Dashboard"
+        app:layout_constraintStart_toStartOf="@+id/tv_selamat_datang"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dashboard_home" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/tv.interBold.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terakhir Dipinjam"
+        app:layout_constraintStart_toStartOf="@+id/tv_dashboard_home"
+        app:layout_constraintTop_toBottomOf="@+id/rv_dashboard" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

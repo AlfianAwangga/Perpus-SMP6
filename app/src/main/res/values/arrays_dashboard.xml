@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="namaDashboard">
+        <item>Jumlah Buku</item>
+        <item>Total Peminjaman</item>
+        <item>Sedang Dipinjam</item>
+        <item>Dikembalikan</item>
+    </string-array>
+    <integer-array name="nilaiDashboard">
+        <item>246</item>
+        <item>78</item>
+        <item>12</item>
+        <item>56</item>
+    </integer-array>
+</resources>

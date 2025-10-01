@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="idBuku">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="judulBuku">
+        <item>Matematika Kelas 7</item>
+        <item>IPA Terpadu</item>
+        <item>Bahasa Inggris</item>
+    </string-array>
+    <string-array name="idPeminjam">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="namaPeminjam">
+        <item>Andi</item>
+        <item>Budi</item>
+        <item>Caca</item>
+    </string-array>
+    <string-array name="tanggal">
+        <item>23/9</item>
+        <item>23/9</item>
+        <item>23/9</item>
+    </string-array>
+</resources>

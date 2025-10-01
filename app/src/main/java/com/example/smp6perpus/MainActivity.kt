@@ -1,11 +1,13 @@
 package com.example.smp6perpus
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.smp6perpus.databinding.ActivityMainBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -17,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         bottomNavigation()
+        binding.fabAdd.setOnClickListener{
+            showBottomSheetForm()
+        }
     }
 
     //setup bottom navbar
@@ -30,5 +35,18 @@ class MainActivity : AppCompatActivity() {
     private fun splashScreen() {
         Thread.sleep(1000)
         installSplashScreen()
+    }
+
+    //show bottom sheet form
+    private fun showBottomSheetForm() {
+        val bottomSheetDialog = BottomSheetDialog(this)
+        bottomSheetDialog.setContentView(R.layout.bottom_sheet_add)
+        bottomSheetDialog.show()
+    }
+
+    fun onTextViewClicked(view: View) {
+        when (view.id) {
+
+        }
     }
 }

@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smp6perpus.Utils.dropdownOption
 import com.example.smp6perpus.databinding.ActivityFormBukuBinding
 
 class FormBukuActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,7 +23,7 @@ class FormBukuActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         setIDBuku()
-        dropdownOption()
+        dropdownOption(binding.etRak, applicationContext, resources.getStringArray(R.array.judulBuku))
         binding.btnGambarBuku.setOnClickListener(this)
         binding.btnBatalBuku.setOnClickListener(this)
         binding.btnSimpanBuku.setOnClickListener(this)
@@ -48,19 +49,6 @@ class FormBukuActivity : AppCompatActivity(), View.OnClickListener {
     }
     private fun setIDBuku() {
         binding.etIdBuku.setText("B001")
-    }
-    private fun dropdownOption() {
-        binding.etRak.setAdapter(
-            ArrayAdapter(
-                applicationContext,
-                android.R.layout.simple_dropdown_item_1line,
-                resources.getStringArray(R.array.judulBuku)
-            )
-        )
-        binding.etRak.setOnItemClickListener { parent, view, position, id ->
-            val selectedItem = parent.getItemAtPosition(position).toString()
-            Toast.makeText(this@FormBukuActivity, "Anda memilih: $selectedItem", Toast.LENGTH_SHORT).show()
-        }
     }
     private fun AmbilGambar() {
         takePicturePreview.launch(null)

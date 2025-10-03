@@ -88,7 +88,8 @@
             android:id="@+id/et_isbn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ISBN (Opsional)" />
+            android:hint="ISBN (Opsional)"
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -147,7 +148,8 @@
             android:id="@+id/et_jumlah_buku"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Jumlah Buku" />
+            android:hint="Jumlah Buku"
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

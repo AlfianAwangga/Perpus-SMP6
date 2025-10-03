@@ -1,7 +1,9 @@
 package com.example.smp6perpus
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
@@ -46,7 +48,21 @@ class MainActivity : AppCompatActivity() {
 
     fun onTextViewClicked(view: View) {
         when (view.id) {
-
+            R.id.tv_tambah_buku -> {
+                val intent =  Intent(this, FormBukuActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.tv_tambah_pinjam -> {
+                val intent =  Intent(this, FormPeminjamanActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.tv_tambah_kembali -> {
+                val intent =  Intent(this, FormPengembalian::class.java)
+                startActivity(intent)
+            }
+            R.id.tv_tambah_akun -> {
+                Toast.makeText(this, "Belum Tersedia", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

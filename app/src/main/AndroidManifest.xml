@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Smp6perpus"
         tools:targetApi="31">
         <activity
+            android:name=".FormPengembalian"
+            android:exported="false" />
+        <activity
+            android:name=".FormPeminjamanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FormBukuActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/splashScreen">
